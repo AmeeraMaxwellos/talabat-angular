@@ -1,0 +1,63 @@
+/* You can add global styles to this file, and also import other style files */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+
+@font-face {
+    font-family: 'TT Commons Pro';
+    /* src: url('/fonts/TT\ Commons\ Pro\ Normal.otf') format('opentype'); */
+    src: url('../public/fonts/TT\ Commons\ Pro\ Normal.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'TT Commons Pro';
+    /* src: url('/fonts/TT\ Commons\ Pro\ Bold.otf') format('opentype'); */
+    src: url('../public/fonts/TT\ Commons\ Pro\ Bold.otf') format('opentype');
+    font-weight: bold;
+    font-style: normal;
+  }
+
+
+:root {
+
+    --body-bg-color:#f4ede3;
+    --header-bg-color:#ff5900;
+    --main-txt-color-white:white;
+    --text-regular :'TT Commons Pro';
+    --text-color-brown :#411517;
+
+  }
+
+
+
+  body {
+    font-family: 'TT Commons Pro', sans-serif;
+   
+}
+
+button{
+    background-color: var(--header-bg-color);
+    color: var(--main-txt-color-white);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.2em;
+    transition: background-color 0.3s ease;
+    margin-top: auto; 
+    align-self: center; 
+}
+
+button:hover {
+  background-color: var( --text-color-brown);
+  font-weight: bold;
+}
+
+h1,h2,h3,h4,h5,h6,p{
+  color: var(--text-color-brown);
+}

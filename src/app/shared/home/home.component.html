@@ -1,0 +1,24 @@
+<div class="home-page-wrapper">
+
+    <section class="hero">
+        <img [src]="heroImage.src" [alt]="heroImage.alt" class="hero-image">
+      </section>
+  
+    <section class="categories">
+      <div class="category-card" *ngFor="let category of categories">
+        <div class="category-image">
+          <img [src]="category.image" [alt]="category.alt">
+        </div>
+        <div class="category-content">
+          <h2>{{ category.title }}</h2>
+          <p>{{ category.description }}</p>
+          <a [routerLink]="[category.link]">
+            <button class="get-it-btn">GET IT</button>
+          </a>
+        </div>
+      </div>
+    </section>
+  </div>
+  
+
+

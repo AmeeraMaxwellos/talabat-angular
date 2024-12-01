@@ -1,0 +1,44 @@
+
+/* header.html CSS START */
+
+  .header {
+    position: sticky;
+    top: 0;
+    z-index: 1000; /* Ensure it stays above other elements */
+
+    background-color: var(--header-bg-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+  
+  .logo img {
+    height: 40px;
+  }
+  
+  .header .sign-in {
+    color: var(--main-txt-color-white);
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  /* header.html CSS END */
+
+
+  
+@media (max-width: 480px) {
+
+  /* header.html CSS START */
+
+  .logo img {
+      height: 30px;
+  }
+
+/* header.html CSS END */
+
+
+
+
+}
