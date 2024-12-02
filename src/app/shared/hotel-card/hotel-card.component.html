@@ -21,10 +21,10 @@
       *ngFor="let card of filteredHotelCards"
     >
       <div class="card-img">
-        <img [src]="card.imgSrc" alt="Restaurant Image" class="logo" height="500" width="500" />
+        <img [src]="card.image" alt="Restaurant Image" class="logo" height="500" width="500" />
       </div>
       <div class="card-content">
-        <h3>{{ card.title }}</h3>
+        <h3>{{ card.restaurant_name }}</h3>
         <p>{{ card.description }}</p>
       </div>
       <button (click)="openModal(card)">Get QR Code</button>
