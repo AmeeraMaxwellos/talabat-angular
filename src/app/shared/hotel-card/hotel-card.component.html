@@ -1,50 +1,50 @@
 
-   <div class="hotel-card-wrapper">
-    <!-- Search Bar -->
-    <div class="search-bar">
-      <input
-        type="text"
-        [(ngModel)]="searchTerm"
-        placeholder="Search for restaurants..."
-        class="search-input"
-      />
-    </div>
-  
-    <!-- No results message -->
-    <div *ngIf="filteredHotelCards.length === 0" class="no-results">
-      <p>No restaurants found..!</p>
-    </div>
-  
-    <!-- Hotel Cards -->
-    <div
-      class="card"
-      *ngFor="let card of filteredHotelCards"
-    >
-      <div class="card-img">
-        <img [src]="card.image" alt="Restaurant Image" class="logo" height="500" width="500" />
-      </div>
-      <div class="card-content">
-        <h3>{{ card.restaurant_name }}</h3>
-        <p>{{ card.description }}</p>
-      </div>
-      <button (click)="openModal(card)">Get QR Code</button>
-    </div>
+
+
+<div class="hotel-card-wrapper">
+  <!-- Search Bar -->
+  <div class="search-bar">
+    <input
+      type="text"
+      [(ngModel)]="searchTerm"
+      (input)="onSearchTermChange()" 
+      placeholder="Search for restaurants..."
+      class="search-input"
+    />
   </div>
-  
-  <!-- Modal -->
-  <div *ngIf="isModalOpen" class="modal">
-    <div class="modal-content">
-      <span class="close" (click)="closeModal()">&times;</span>
-      <h2 class="hotel-name-qr">
-        <strong>{{ selectedHotelName }}</strong> 
-      </h2>
-      <p class="deal-qr">
-        <strong>{{ selectedHotelDeal }}</strong> 
-      </p>
-      <div class="qr-img">
-        <img [src]="qrCodeImage" alt="QR Code" class="qr-code" />
-      </div>
-      <button (click)="closeModal()" class="back-to-rest-btn">Back to Restaurants</button>
-    </div>
+
+  <!-- No results message -->
+  <div *ngIf="filteredHotelCards.length === 0" class="no-results">
+    <p>No restaurants found..!</p>
   </div>
-  
+
+  <!-- Hotel Cards -->
+  <div class="card" *ngFor="let card of filteredHotelCards">
+    <div class="card-img">
+      <img [src]="card.image" alt="Restaurant Image" class="logo" height="500" width="500" />
+    </div>
+    <div class="card-content">
+      <h3>{{ card.restaurant_name }}</h3>
+      <p>{{ card.description }}</p>
+    </div>
+    <button (click)="openModal(card)">Get QR Code</button>
+  </div>
+</div>
+
+<!-- Modal -->
+<div *ngIf="isModalOpen" class="modal">
+  <div class="modal-content">
+    <span class="close" (click)="closeModal()">&times;</span>
+    <h2 class="hotel-name-qr">
+      <strong>{{ selectedHotelName }}</strong>
+    </h2>
+    <p class="deal-qr">
+      <strong>{{ selectedHotelDeal }}</strong>
+    </p>
+    <div class="qr-img">
+      <img [src]="qrCodeImage" alt="QR Code" class="qr-code" />
+    </div>
+    <button (click)="closeModal()" class="back-to-rest-btn">Back to Restaurants</button>
+  </div>
+</div>
+
