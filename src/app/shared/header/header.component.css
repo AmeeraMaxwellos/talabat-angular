@@ -30,7 +30,7 @@
   .back-button {
     background: none;
     position: absolute;
-    top: 15px;
+    top: 10px;
     right: 15px;
     color: var(--main-txt-color-white); 
     padding: 5px 10px;
