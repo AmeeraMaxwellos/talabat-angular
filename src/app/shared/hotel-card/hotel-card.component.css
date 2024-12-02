@@ -37,6 +37,7 @@
     transition: transform 0.2s ease-in-out;
     width: 300px;
     position: relative;
+    background-color: white;
 }
 
 .card-content {

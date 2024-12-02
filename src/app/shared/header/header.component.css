@@ -27,6 +27,27 @@
   /* header.html CSS END */
 
 
+  .back-button {
+    background: none;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: var(--main-txt-color-white); 
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.back-button:hover {
+    background: none;
+    background-color: transparent;
+    color: var(--text-color-brown);
+}
+
+
+
   
 @media (max-width: 480px) {
 
@@ -35,6 +56,11 @@
   .logo img {
       height: 30px;
   }
+
+  .back-button i , .back-button {
+    font-size: 16px;
+  }
+
 
 /* header.html CSS END */
 
