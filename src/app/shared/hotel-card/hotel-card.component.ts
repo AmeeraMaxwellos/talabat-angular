@@ -52,7 +52,7 @@ export class HotelCardComponent implements OnInit {
   }
 
   openModal(card: any) {
-    this.qrCodeImage = card.image;
+    this.qrCodeImage = card.qr_image;
     this.selectedHotelName = card.restaurant_name;
     // this.selectedHotelDeal = this.stripHtml(card.description);
     this.selectedHotelDeal = card.discount_percentage;
