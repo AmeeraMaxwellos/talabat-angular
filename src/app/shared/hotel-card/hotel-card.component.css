@@ -6,6 +6,8 @@
     gap: 30px;
     padding: 20px 30px;
     position: relative;
+
+  justify-content: center;
 }
 
 
@@ -38,6 +40,7 @@
     width: 300px;
     position: relative;
     background-color: white;
+
 }
 
 .card-content {
